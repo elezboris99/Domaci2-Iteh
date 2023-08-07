@@ -16,7 +16,7 @@ class ItemResource extends JsonResource
                 'Kolicina' => $this->resource->amount,
                 'Tip mjere' => $this->resource->measure_type,
                 'Prodavnica' => new PlaceResource($this->resource->place),
-                'Korisnik'=> new UserResource($this->resource->user),
+                'Korisnik'=> new UserResource($this->resource->user)
     ];
     }
 }

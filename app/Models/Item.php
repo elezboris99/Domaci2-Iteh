@@ -8,11 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Item extends Model
 {
     use HasFactory;
-    protected $fillable=[
-        'product',
-        'amount',
-        'measureType',
-    ];
+    protected $guarded = [];
     public function place(){
         return $this->belongsTo(Place::class);
     }
