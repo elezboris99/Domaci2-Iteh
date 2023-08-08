@@ -23,7 +23,7 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
         return auth()->user();
     });
     Route::resource('/items', ItemController::class)->only(['update','store','destroy']);
-
+    Route::put('/doubleAmount/{item}', [ItemController::class, 'doubleAmount']);
 
     Route::post('/logout', [AuthController::class, 'logout']);
 });
